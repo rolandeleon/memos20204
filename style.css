@@ -1,51 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Numeración solo páginas pares</title>
-    <style>
-        @page {
-            size: letter;
-            margin: 2cm;
-        }
-        
-        .par {
-            page-break-after: always;
-            counter-increment: page;
-        }
-        
-        .par:after {
-            content: counter(page);
-            text-align: right;
-            margin-right: 2cm;
-        }
-        
-        /* Opcional: estilos para el contenido */
-        
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-        
-        p {
-            margin-bottom: 1em;
-        }
-    </style>
-</head>
-<body>
-    <p>Contenido de la página 1 (impar)</p>
-    
-    <div class="par">
-        <p>Contenido de la página 2 (par)</p>
-    </div>
-    
-    <p>Contenido de la página 3 (impar)</p>
-    
-    <div class="par">
-        <p>Contenido de la página 4 (par)</p>
-    </div>
-    
-    </body>
-</html>
+@page {
+  size: letter;
+  margin: 2cm;
+}
+.par {
+  page-break-after: always;
+  counter-increment: page;
+}
+.par:after {
+  content: counter(page);
+  text-align: right;
+  margin-right: 2cm;
+}
